@@ -19,7 +19,7 @@ jobs:
       - name: Install pandoc and pandoc-plantuml-filter
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc pandoc-plantuml-filter
+          sudo apt-get install -y pandoc pandoc-plantuml plantuml
 
       # Convert the Markdown file to a README file
       - name: Convert Markdown to README
