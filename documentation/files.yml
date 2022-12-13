@@ -1,0 +1,6 @@
+input-files:
+  - title.md
+  - grammar.md
+  - implementation.md
+  - implementation/swift.md
+  - examples.md

@@ -1,0 +1,39 @@
+# Convert Markdown to Markdown using Pandoc
+
+name: Convert Markdown to README
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code
+      - uses: actions/checkout@v2
+
+      # Install pandoc and pandoc-plantuml-filter
+      - name: Install pandoc and pandoc-plantuml-filter
+        run: |
+          apt-get update
+          apt-get install -y pandoc pandoc-plantuml-filter
+
+      # Change the working directory
+      - name: Change working directory
+        run: cd documentation
+
+      # Convert the Markdown file to a README file
+      - name: Convert Markdown to README
+        run: pandoc --defaults files.yml -f markdown -t markdown --filter pandoc-plantuml-filter -o README.md
+
+      # Commit and push the README file to the main branch
+      - name: Commit and push README
+        run: |
+          git add README.md
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git commit -m "Convert Markdown to README"
+          git push
