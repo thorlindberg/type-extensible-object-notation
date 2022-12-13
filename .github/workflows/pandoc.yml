@@ -18,8 +18,8 @@ jobs:
       # Install pandoc and pandoc-plantuml-filter
       - name: Install pandoc and pandoc-plantuml-filter
         run: |
-          apt-get update
-          apt-get install -y pandoc pandoc-plantuml-filter
+          sudo apt-get update
+          sudo apt-get install -y pandoc pandoc-plantuml-filter
 
       # Change the working directory
       - name: Change working directory
