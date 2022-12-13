@@ -1,13 +1,20 @@
 Type-Extensible Oject Notation (TXON)
 =====================================
 
-\[Text\] \#\# Grammar
+\[Text\]
 
-\[McKeeman Form, based on json.org\] \#\# Implementation
+Grammar
+-------
+
+\[McKeeman Form, based on json.org\]
+
+Implementation
+--------------
 
 \[Text\]
 
-Examples
---------
+### Swift
+
+\[Text\] \#\# Examples
 
 \[Text\]
