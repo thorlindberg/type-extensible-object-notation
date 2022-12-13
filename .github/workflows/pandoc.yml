@@ -19,11 +19,11 @@ jobs:
       - name: Install pandoc and pandoc-plantuml-filter
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc pandoc-plantuml plantuml
+          sudo apt-get install -y pandoc pandoc-plantuml-filter plantuml
 
       # Convert the Markdown file to a README file
       - name: Convert Markdown to README
-        run: pandoc --defaults files.yml -f markdown -t markdown --filter pandoc-plantuml-filter -o README.md
+        run: pandoc --defaults files.yml -f markdown -t markdown --filter pandoc-plantuml -o README.md
         working-directory: ./documentation
 
       # Commit and push the README file to the main branch
