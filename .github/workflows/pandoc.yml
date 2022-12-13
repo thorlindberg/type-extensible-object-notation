@@ -25,6 +25,10 @@ jobs:
       - name: Change working directory
         run: cd documentation
 
+      # List files in working directory
+      - name: List working directory
+        run: ls
+
       # Convert the Markdown file to a README file
       - name: Convert Markdown to README
         run: pandoc --defaults files.yml -f markdown -t markdown --filter pandoc-plantuml-filter -o README.md
