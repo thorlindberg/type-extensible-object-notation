@@ -1,0 +1,12 @@
+{
+    "type": {
+        "fruit": ["String"]
+    },
+    "data": {
+        "fruit": [
+            "apple",
+            "banana",
+            "orange"
+        ]
+    }
+}
