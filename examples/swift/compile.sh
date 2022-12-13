@@ -1,1 +1,1 @@
-swiftc *.swift ../packages/txon.swift -o main
+swiftc *.swift ../../packages/txon.swift -o execute
