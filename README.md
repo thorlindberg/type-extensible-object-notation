@@ -15,6 +15,9 @@ Implementation
 
 ### Swift
 
-\[Text\] \#\# Examples
+\[Explanation of package\]
+
+Examples
+--------
 
 \[Text\]
