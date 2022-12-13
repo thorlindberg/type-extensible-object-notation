@@ -23,13 +23,13 @@ jobs:
 
       # Convert the Markdown file to a README file
       - name: Convert Markdown to README
-        run: pandoc --defaults files.yml -f markdown -t markdown --filter pandoc-plantuml -o README.md
+        run: pandoc --defaults files.yml -f markdown -t markdown --filter pandoc-plantuml -o ./README.md
         working-directory: ./documentation
 
       # Commit and push the README file to the main branch
       - name: Commit and push README
         run: |
-          git add ./documentation/README.md
+          git add README.md
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git commit -m "Convert Markdown to README"
