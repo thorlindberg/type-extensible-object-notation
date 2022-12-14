@@ -25,7 +25,7 @@ jobs:
 
       # Convert the Markdown file to a README file
       - name: Convert Markdown to README
-        run: pandoc --defaults files.yml -f markdown -t markdown --filter pandoc-plantuml -o ../README.md
+        run: pandoc --defaults files.yml -f markdown -t markdown --filter pandoc-plantuml -o ../README.md --number-sections
         working-directory: ./documentation
 
       # Commit and push the README file to the main branch
